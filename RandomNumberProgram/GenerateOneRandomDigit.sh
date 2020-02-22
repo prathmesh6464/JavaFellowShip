@@ -1,0 +1,2 @@
+echo "Random Digit : "  $((RANDOM))
+
