@@ -38,28 +38,20 @@ done
 echo minimum Value : $previousMinValue
 echo maximum Value : $previousMaxValue
 
+index=1
 minValue=${array[0]}
 maxValue=${array[0]}
-for ((i=0;i<10;i++))
+while(($index<$((${#array[@]}))))
 do
-	if (( ${array[i]} != $previouMinValue ))
+	if(($maxValue<${array[index]} && $previousMaxValue!=${array[index]}))
 	then
-		if (($minValue>${array[i]}))
-		then
-			minValue=${array[i]}
-		fi
+		maxValue=${array[index]}
 	fi
-done
-echo Second Minimum Value $minValue
-for ((i=0;i<10;i++))
-do
-	if $((${array[i]}!=$previousMaxValue))
+	if(($minValue>${array[index]} && $previousMinValue!=${array[index]}))
 	then
-		if (($maxValue<${array[i]} ))
-		then
-			maxValue=${array[i]} ))
-		fi
+		minValue=${array[index]}
 	fi
+	((index++))
 done
-echo Second Maximum Value $maxValue
-
+echo "Second Min Value : "$minValue
+echo "Second Max Value : "$maxValue 
