@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p "Enter Number To Convert into Units " number
 case "${#number}" in 
 	1)
