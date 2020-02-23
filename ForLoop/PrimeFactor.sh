@@ -1,21 +1,25 @@
+#!/bin/bash -x
+
+
+#LOGIC OF PRIME FACTOR
 read -p "Enter Number To Compute Prime Factor : " number
-for ((i=2;i<=$((number));i++))
+for ((iter=2;iter<=$((number));iter++))
 do
 	flag=0
-	for ((j=2;j<=$((i/2));j++))
+	for ((iter2=2;iter2<=$((iter/2));iter2++))
 	do
-		if (($((i%j)) == 0 ))
+		if (($((iter%iter2)) == 0 ))
 		then
 			flag=1
 		fi
 	done
 	if (( $flag==0 ))
 	then
-		 if (( $((number%i))==0 ))
+		 if (( $((number%iter))==0 ))
        		 then
-			echo $i
-			number=$((number/i))
-			i=$((i-1))
+			echo $iter
+			number=$((number/iter))
+			iter=$((iter-1))
 		fi
 	fi
 done
