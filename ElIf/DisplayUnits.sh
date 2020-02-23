@@ -1,7 +1,10 @@
-read -p "Enter Number and Display unit" number
+#!/bin/bash -x
+
+
+read -p "Enter Number And Display unit" number
 if (( ${#number} == 1 ));
 then
-	echo $number in unit place
+	echo $number "in unit place";
 elif (( ${#number} == 2 ));
 then	
 	number1=$(($number%10));
@@ -32,5 +35,5 @@ then
 	number1=$(($number%10));
         echo $number1 "in thousand place";
 else
-	echo please Enter In Between Unit 1 To Unit 1000;
+	echo "please Enter In Between Unit 1 To Unit 1000";
 fi
