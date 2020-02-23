@@ -1,24 +1,39 @@
-#1/bin/bash -x
+#!/bin/bash -x
+
+
+#CONSTANT VARIABLE
+SIZE_OF_ARRAY=10
+
+
+#VARIABLE
 declare -a array
-for ((i=0;i<10;i++))
+
+
+#TAKING INPUT IN ARRAY
+for ((iter=0;iter<SIZE_OF_ARRAY;iter++))
 do
-	array[i]=$((RANDOM%900+100))
+	array[iter]=$((RANDOM%900+100))
 done
 
-for ((i=0;i<10;i++))
+
+# LOGIC OF SORTING ARRAY
+for ((iter=0;iter<SIZE_OF_ARRAY;iter++))
 do
-	for((j=i+1;j<10;j++))
+	for((iter2=iter+1;iter2<SIZE_OF_ARRAY;iter2++))
 	do
-		if((${array[i]} > ${array[j]}))
+		if((${array[iter]} > ${array[iter2]}))
 		then
-			temp=${array[i]}
-			array[i]=${array[j]}
-			array[j]=$temp
+			temp=${array[iter]}
+			array[iter]=${array[iter2]}
+			array[iter2]=$temp
 		fi
 	done
 done
-echo Array : ${array[@]}
-echo Second Minimum Value : ${array[1]}
-echo Second Minimum Value : ${array[8]}
+
+
+#DISPLAY ARRAY AND SECOND MINIMUM AND MAXIMUM VALUE
+echo "Array : " ${array[@]}
+echo "Second Minimum Value : " ${array[1]}
+echo "Second Minimum Value : " ${array[8]}
 
 
