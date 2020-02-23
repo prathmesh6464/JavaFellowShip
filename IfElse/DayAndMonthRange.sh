@@ -1,3 +1,5 @@
+#!/bin/bash -x
+#TAKING COMMAND LINE ARGUMENT
 day=$1;month=$2
 if [[ $day -ge 20 && $day -le 31  && $month -eq 3 ]];
 then
