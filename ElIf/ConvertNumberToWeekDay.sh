@@ -1,25 +1,28 @@
-read -p "Enter 0 for sunday 1 for monday etc." number
+#!/bin/bash -x
+
+
+read -p "Enter 0 For Sunday 1 For Monday Etc." number
 if [[ number -eq 0 ]]
 then
-	echo Sunday
+	echo "Sunday"
 elif [[ number -eq 1 ]]
 then 
-	echo Monday
+	echo "Monday"
 elif [[ number -eq 2 ]]
 then
-	echo Tuesday
+	echo "Tuesday"
 elif [[ number -eq 3 ]]
 then
-	echo Wednesday
+	echo "Wednesday"
 elif [[ number -eq 4 ]]
 then
-	echo Thursday
+	echo "Thursday"
 elif [[ number -eq 5 ]]
 then
-	echo Friday
-elif [[ Num -eq 6 ]]
+	echo "Friday"
+elif [[ number -eq 6 ]]
 then
-	echo Saturday
+	echo "Saturday"
 else
-	echo Please Enter Vadlid Number
+	echo "Please Enter Vadlid Number"
 fi
