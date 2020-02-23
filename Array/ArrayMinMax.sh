@@ -1,57 +1,72 @@
 #!/bin/bash -x
+
+
+#CONSTANT VARIABLE
+SIZE_OF_ARRAY=10
+
+
+#VARIABLE
 declare -a array
-for ((i=0;i<10;i++))
-do
-	array[i]=$((RANDOM%900+100))
-done
-echo ${array[@]}
-previousMinValue=0
-previousMaxValue=0
-for ((i=0;i<10;i++))
-do
-	index=$((i+1))
-	if (($i==0))
-	then
-		minValue=$((array[0]))
-	fi
-	previousMinValue=$minValue
-	if (($minValue>$((array[index]))))
-	then
-		minValue=${array[index]}
-	fi
-done
-for ((i=0;i<10;i++))
-do
-	index=$((i+1))
-	if (($i==0))
-	then
-		maxValue=$((array[0]))
-	fi
-	previousMaxValue=$maxValue
-	if (($maxValue<$((array[index]))))
-	then
-		previousMaxValue=$maxValue
-		maxValue=${array[index]}
-	fi
-done
-
-echo minimum Value : $previousMinValue
-echo maximum Value : $previousMaxValue
-
 index=1
+
+
+#TAKING INPUT IN ARRAY
+for ((iter=0;iter<SIZE_OF_ARRAY;iter++))
+do
+	array[iter]=$((RANDOM%900+100))
+done
+
+
+#DISPLAY ARRAY
+echo ${array[@]}
+
+
+#VARIABLE
 minValue=${array[0]}
 maxValue=${array[0]}
-while(($index<$((${#array[@]}))))
+
+
+#LOGIC TO FIND MIN AND MAX VALUE
+while (($index<$((${#array[@]}))))
 do
-	if(($maxValue<${array[index]} && $previousMaxValue!=${array[index]}))
+	if(($maxValue<$((${array[index]}))))
 	then
-		maxValue=${array[index]}
+		maxValue=$((${array[index]}))
 	fi
-	if(($minValue>${array[index]} && $previousMinValue!=${array[index]}))
+	if(($minValue>$((${array[index]}))))
 	then
 		minValue=${array[index]}
 	fi
 	((index++))
 done
-echo "Second Min Value : "$minValue
-echo "Second Max Value : "$maxValue 
+
+
+#DISPLAY MIN VALUE AND MAX VALUE
+echo "Minimum Value : " $minValue
+echo "Maximum Value : " $maxValue
+
+
+#VARIABLE
+index=1
+secondMinValue=${array[0]}
+secondMaxValue=${array[0]}
+
+
+#LOGIC TO FIND SECOND MIN AND MAX VALUE
+while (($index<$((${#array[@]}))))
+do
+	if(($secondMaxValue<${array[index]} && $maxValue!=$((${array[index]}))))
+	then
+		secondMaxValue=${array[index]}
+	fi
+	if(($secondMinValue>${array[index]} && $minValue!=$((${array[index]}))))
+	then
+		secondMinValue=${array[index]}
+	fi
+	((index++))
+done
+
+
+#DISPLAY SECOND MIN AND MAX VALUE
+echo "Second Min Value : " $secondMinValue
+echo "Second Max Value : " $secondMaxValue 
