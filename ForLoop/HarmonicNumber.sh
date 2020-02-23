@@ -1,8 +1,15 @@
+#!/bin/bash -x
+
+#COMMAND LINE ARGUMENT	
 number=$1
 result=0
-for ((i=1;i<=$number;i++))
+for ((iter=1;iter<=$number;iter++))
 do
-	result=`echo "1/$i+$result" | bc -l`
+	result=`echo "1/$iter" | bc -l`
+	result=$(($result+$result))
 
 done
+
+
+#DISPLAY HARMONIC NUMBER
 echo $result
