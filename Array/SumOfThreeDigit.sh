@@ -1,12 +1,18 @@
-array=(-1 0 1 2 -3)
-for ((i=0;i<$((${#array[@]}-2));i++))
-do
-	second=$((i+1))
-	third=$((i+2))
-	if (( $((${array[i]}+${array[second]}+${array[third]}))==0 ))
-	then
-		echo ${array[i]} ${array[second]} ${array[third]} sum is : 0
-	fi
+#!/bin/bash -x
 
+
+#VARIBALE
+array=(-1 0 1 2 -3)
+
+
+#LOGIC TO COMPUTE SUM OF 3 NUMBERS EQUALS TO ZERO
+for ((iter=0;iter<$((${#array[@]}-2));iter++))
+do
+	second=$((iter+1))
+	third=$((iter+2))
+	if (( $((${array[iter]}+${array[second]}+${array[third]}))==0 ))
+	then
+		echo ${array[iter]} ${array[second]} ${array[third]} "Sum Is : " 0
+	fi
 done
 
