@@ -1,6 +1,4 @@
 #!/bin/bash -x
-
-
 #PRIME NUMBER LOGIC
 read -p "Enter A Number " number
 temp=0
