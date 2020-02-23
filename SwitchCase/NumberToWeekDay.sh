@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p "Enter Number To Display The Week Day : " Number
 case $Number in 
 
