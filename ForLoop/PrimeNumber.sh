@@ -1,13 +1,18 @@
+#!/bin/bash -x
+
+
+#PRIME NUMBER LOGIC
 read -p "Enter A Number " number
 temp=0
-for ((i=2;i<$number/2;i++))
+for((iter=2;iter<$number/2;iter++))
 do
-	if [[ $(($number%$i)) -eq 0 ]]
+	if(($(($number%$iter))==0))
 	then
 		((temp++))
+		break
 	fi
 done
-	if [[ $temp == 0 && $number!=1 ]]
+	if(($temp==0 && $number!=1))
 	then
 		echo "$number is  Prime"
 	else
