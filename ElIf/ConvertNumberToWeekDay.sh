@@ -1,6 +1,4 @@
 #!/bin/bash -x
-
-
 read -p "Enter 0 For Sunday 1 For Monday Etc." number
 if [[ number -eq 0 ]]
 then
