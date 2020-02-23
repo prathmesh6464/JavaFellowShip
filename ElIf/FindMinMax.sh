@@ -1,6 +1,4 @@
 #!/bin/bash -x
-
-
 #TAKING INPUT FROM USER
 read -p "Enter First Number : " num1
 read -p "Enter Second Number : " num2
