@@ -1,9 +1,15 @@
 #!/bin/bash -x
 read -p "Enter The Number : " number
+
+
+#VARIABLE
 num=1
 changeValue=101
+
+
 while (($num<=$changeValue))
-do 	val=$((num+changeValue))
+do
+	val=$((num+changeValue))
 	if (($((Val%2))==0))
 	then
 		mid=$(($((num+changeValue))/2))
@@ -18,8 +24,6 @@ do 	val=$((num+changeValue))
 		else
 			changeValue=$mid
 		fi
-
-
 	else
 		mid=$(($((num+changeValue+1))/2))
 		if (($mid==$number))
@@ -33,6 +37,5 @@ do 	val=$((num+changeValue))
                 else
                         changeValue=$mid
  	        fi
-
 	fi
 done
