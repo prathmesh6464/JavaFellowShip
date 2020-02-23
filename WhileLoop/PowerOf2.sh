@@ -1,5 +1,12 @@
+#!/bin/bash -x
+#COMMAND LINE ARGUMENT
 powerLimit=$1
+
+
+#VARIABLE
 power=0
+
+
 while ((power<=powerLimit))
 do
 	val=`echo "2^$power" | bc`
