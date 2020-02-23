@@ -1,6 +1,4 @@
 #!/bin/bash -x
-
-
 read -p "Enter Number And Display unit" number
 if (( ${#number} == 1 ));
 then
