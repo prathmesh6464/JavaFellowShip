@@ -1,6 +1,4 @@
 #!/bin/bash -x
-
-
 #VARIABLE
 temp=0
 declare -a array
