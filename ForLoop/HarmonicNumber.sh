@@ -1,5 +1,4 @@
 #!/bin/bash -x
-
 #COMMAND LINE ARGUMENT	
 number=$1
 result=0
