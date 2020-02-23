@@ -1,27 +1,31 @@
-echo "enter your choice";
-echo "1-celcius to farheneit";
-echo "2-farheneit to celcius";
-read number
-function degf(){
-	f=`echo "scale=3; (($c*9/5))+32 " | bc -l`;
-        echo "value in farheneit is $f";
+#!/bin/bash -x
+echo "Enter Your Choice";
+echo "1-Celcius To Farheneit";
+echo "2-Farheneit To Celcius";
+read choice
+
+
+celciusToFarheneit(){
+	celcius=$1
+	ferheneit=`echo "$celcius*9/5+32" | bc -l`;
+        echo "Value In Farheneit Is : " $ferheneit;
 }
-function degc(){
-	c=`echo "scale=3; (($f-32))*5/9" | bc -l`;
-	echo "value in celcius is $c"; 
+
+
+farheneitToCelcius(){ 
+	ferheneit=$1
+	celcius=`echo "$farheneit-32*5/9" | bc -l`;
+	echo "Value In Celcius Is : " $celcius;
 }
-case $number in
-        1)echo "Enter the value in celcius"
-        read c
-        res="$(degf $c)"
-	echo $res;
-        ;;
-        2)echo "Enter the value in farheneit"
-        read f
-        res="$(degc $f)";
-	echo $res;
-        ;;
-        *) echo "invalid input";
-        ;;
+
+
+case $choice in
+        1)echo "Enter The Value In Celcius";
+        read celcius
+        celciusToFarheneit $celciuS;;
+        2)echo "Enter The value In farheneit";
+        read farheneit
+        farheneitToCelcius $farheneit;;
+        *) echo "Invalid Input";;
 esac
 
