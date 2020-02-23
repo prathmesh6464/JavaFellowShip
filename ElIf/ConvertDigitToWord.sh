@@ -1,6 +1,4 @@
 #!/bin/bash -x
-
-
 read -p "Enter Any Value : " digit
 if [[ digit -eq 0 ]];
 then
