@@ -1,18 +1,22 @@
+#!/bin/bash -x
+
+
+#PRIME NUMBER IN GIVEN RANGE
 read -p "Input The Number : " number
-for (( i=1;i<=$number;i++ ))
+for((iter=1;iter<=$number;iter++))
 do
 	flag=0
-	for (( j=2;j <= $((i/2));j++ ))
+	for((iter2=2;iter2 <= $((iter/2));iter2++))
 	do
-		if (( $((i%j)) == 0 ))
+		if(($((iter%iter2))==0))
 		then
 			flag=1
 		fi
 	done
-	if (( $flag==0 && $i!=1 ))
+	if(($flag==0 && $iter!=1))
 	then
-		echo $i is Prime Number
+		echo $iter is Prime Number
 	else
-		echo $i is Not Prime Number
+		echo $iter is Not Prime Number
 	fi
 done
