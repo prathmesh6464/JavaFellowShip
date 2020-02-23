@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p "Enter Number Convert From Feet to inch" Number
 echo $(($Number*12))
 read -p "Enter Number Convert From inch to Feet" Number
