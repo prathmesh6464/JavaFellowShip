@@ -1,5 +1,9 @@
+#!/bin/bash -x
+#VARIBALE
 tail=0
 head=0
+
+
 while (($tail!=11 && $head!=11))
 do
 	number=$((RANDOM%2))
