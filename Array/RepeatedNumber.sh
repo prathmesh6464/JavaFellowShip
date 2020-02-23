@@ -1,12 +1,21 @@
 #!/bin/bash -x
+
+
+#VARIABLE
 index=0
 declare -a array
-for (( i=0; i<=100 ; i++))
+
+
+#LOGIC OF REPEATED NUMBER
+for (( iter=0; iter<=100 ; iter++))
 do
-	if (($(($i%11))==0 && $i!=0))
+	if (($(($iter%11))==0 && $iter!=0))
 	then
-		array[index]=$i
+		array[index]=$iter
 		((index++))
 	fi
 done
-echo ${array[@]}
+
+
+#DISPLAY ARRAY
+echo "Repeated Numbers Between 1 to 100 : " ${array[@]}
