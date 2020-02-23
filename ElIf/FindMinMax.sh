@@ -1,37 +1,57 @@
-read -p "Enter First Number : " Num1
-read -p "Enter Second Number : " Num2
-read -p "Enter Third Number : " Num3
-firstOperation=`echo "scale=4; $Num1+$Num2*$Num3" | bc `
-secondOperation=`echo "scale=4; $Num1%$Num2+$Num3" | bc `
-thirdOperation=`echo "scale=4; $Num3+$Num1/$Num2" | bc `
-fourthOperation=`echo "scale=4; $Num1*$Num2+$Num3" | bc -l`
-echo $Num1+$Num2*$Num3: $firstOperation
-echo $Num1%$Num2+$Num3: $secondOperation
-echo $Num3+$Num1/$Num2: $thirdOperation
-echo $Num1*$Num2+$Num3: $fourthOperation
-MinimumValue=`echo "$firstOperation" | bc -l`
-if [[ $(echo "$secondOperation < $MinimumValue" | bc -l) ]];
+#!/bin/bash -x
+
+
+#TAKING INPUT FROM USER
+read -p "Enter First Number : " num1
+read -p "Enter Second Number : " num2
+read -p "Enter Third Number : " num3
+
+
+#ARITHMATIC OPERATION
+firstOperation=$(("$num1+$num2*$num3"))
+secondOperation=$(("$num1%$num2+$num3"))
+thirdOperation=$(("$num3+$num1/$num2"))
+fourthOperation=$(("$num1*$num2+$num3"))
+
+
+#DISPLAY ARITHMATIC OPERATION
+echo $num1+$num2*$num3 : $firstOperation
+echo $num1%$num2+$num3 : $secondOperation
+echo $num3+$num1/$num2 : $thirdOperation
+echo $num1*$num2+$num3 : $fourthOperation
+
+
+#FINDING MINIMUM VALUE
+minimumValue=$firstOperation
+if [[ $secondOperation < $minimumValue ]];
 then
-	MinimumValue=`echo "$secondOperation" | bc -l`;
-elif [[ `echo "$thirdOperation < $MinimumValue" | bc -l` ]];
+	minimumValue=$secondOperation;
+elif [[ $thirdOperation < $minimumValue ]];
 then
-	MinimumValue=`echo "$thirdOperation" | bc -l`;
-elif [[ fourthOperation < MinimumValue ]];
+	minimumValue=$thirdOperation;
+elif [[ fourthOperation < $minimumValue ]];
 then
-	MinimumValue=$fouthOperation;
+	minimumValue=$fouthOperation;
 fi
-echo Minimum Value is : `echo "$MinimumValue" | bc -l`;
 
-MaximumValue=`echo "$firstOperation" | bc -l`;
 
-if (( `echo "$secondOperation > $MaximumValue" | bc -l` ));
+#DISPLAY MINIMUM VALUE
+echo "Minimum Value Is : " $minimumValue;
+
+
+#FINDING MAXIMUM VALUE
+maximumValue=$firstOperation
+if [[ $secondOperation > $maximumValue ]];
 then
-	MaximumValue=`echo "$secondOperation" | bc -l`;
-elif (( `echo "$thirdOperation >  $MaximumValue" | bc -l` ));
+	maximumValue=$secondOperation;
+elif [[ $thirdOperation >  $maximumValue ]];
 then 
-	MaximumValue=`echo "$thirdOperation" |  bc -l`;
-elif (( `echo "$fourthOperation > $MaximumValue" | bc -l` ));
+	maximumValue=$thirdOperation;
+elif [[ $fourthOperation > $maximumValue ]];
 then
-	MaximumValue=`echo "$fourthOperation" | bc -l`;
+	maximumValue=$fourthOperation;
 fi
-echo Maximum Value is : $MaximumValue
+
+
+#DISPLAY MAXIMUM VALUE
+echo "Maximum Value Is : " $maximumValue;
