@@ -1,4 +1,4 @@
-
+#!/bin/bash -x
 value1=$((RANDOM%99))
 value2=$((RANDOM%99))
 value3=$((RANDOM%99))
