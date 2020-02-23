@@ -12,8 +12,6 @@ do
 		break
 	fi
 done
-
-
 if(($temp==0 && $number!=1))
 then
 	echo "$number is  Prime"
