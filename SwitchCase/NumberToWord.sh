@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p "Enter Number : " Number
  case $Number in 
 	0)
