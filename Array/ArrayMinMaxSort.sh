@@ -1,6 +1,4 @@
 #!/bin/bash -x
-
-
 #CONSTANT VARIABLE
 SIZE_OF_ARRAY=10
 
