@@ -12,9 +12,11 @@ do
 		break
 	fi
 done
-	if(($temp==0 && $number!=1))
-	then
-		echo "$number is  Prime"
-	else
-		echo "$number is not prime"
-	fi
+
+
+if(($temp==0 && $number!=1))
+then
+	echo "$number is  Prime"
+else
+	echo "$number is not prime"
+fi
