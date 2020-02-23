@@ -1,3 +1,4 @@
+#!/bin/bash -x
 randVal=$((RANDOM%6))
 randVal2=$((RANDOM%6))
 randVal=$(( $randVal+ 1 ))
