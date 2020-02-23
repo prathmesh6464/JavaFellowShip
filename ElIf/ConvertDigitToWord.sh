@@ -1,6 +1,6 @@
 #!/bin/bash -x
 read -p "Enter Any Value : " digit
-if [[ digit -eq 0 ]];
+if [[ digit -eq 0 ]]
 then
 	echo "Zero"
 elif [[ digit -eq 1 ]]
