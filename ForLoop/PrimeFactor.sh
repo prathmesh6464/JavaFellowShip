@@ -1,6 +1,4 @@
 #!/bin/bash -x
-
-
 #LOGIC OF PRIME FACTOR
 read -p "Enter Number To Compute Prime Factor : " number
 for ((iter=2;iter<=$((number));iter++))
