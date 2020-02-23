@@ -1,6 +1,4 @@
 #!/bin/bash -x
-
-
 #PRIME NUMBER IN GIVEN RANGE
 read -p "Input The Number : " number
 for((iter=1;iter<=$number;iter++))
