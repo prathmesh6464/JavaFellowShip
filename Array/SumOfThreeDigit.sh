@@ -1,6 +1,4 @@
 #!/bin/bash -x
-
-
 #VARIBALE
 array=(-1 0 1 2 -3)
 
