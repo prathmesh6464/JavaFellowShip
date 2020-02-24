@@ -2,25 +2,25 @@
 read -p "Enter Number : " Number
  case $Number in 
 	0)
-		echo Zero;;
+		echo "Zero";;
 	1)
-		echo One;;
+		echo "One";;
 	2)
-		echo Two;;
+		echo "Two";;
 	3)
-		echo Three;;
+		echo "Three";;
 	4)
-		echo Four;;
+		echo "Four";;
 	5)
-		echo Five;;
+		echo "Five";;
 	6)
-		echo Six;;
+		echo "Six";;
 	7)
-		echo Seven;;
+		echo "Seven";;
 	8)
-		echo Eight;;
+		echo "Eight";;
 	9)
-		echo Nine;;
+		echo "Nine";;
 	*)
-		echo "please Enter One Digit Number Only"
+		echo "please Enter One Digit Number Only";;
 esac
