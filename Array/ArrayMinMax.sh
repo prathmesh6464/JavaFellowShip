@@ -4,36 +4,36 @@ SIZE_OF_ARRAY=10
 
 
 #VARIABLE
-declare -a array
+declare -a arrayOfNumber
 index=1
 
 
 #TAKING INPUT IN ARRAY
 for ((iter=0;iter<SIZE_OF_ARRAY;iter++))
 do
-	array[iter]=$((RANDOM%900+100))
+	arrayOfNumber[iter]=$((RANDOM%900+100))
 done
 
 
 #DISPLAY ARRAY
-echo ${array[@]}
+echo ${arrayOfNumber[@]}
 
 
 #VARIABLE
-minValue=${array[0]}
-maxValue=${array[0]}
+minValue=${arrayOfNumber[0]}
+maxValue=${arrayOfNumber[0]}
 
 
 #LOGIC TO FIND MIN AND MAX VALUE
-while (($index<$((${#array[@]}))))
+while (($index<$((${#arrayOfNumber[@]}))))
 do
-	if(($maxValue<$((${array[index]}))))
+	if(($maxValue<$((${arrayOfNumber[index]}))))
 	then
-		maxValue=$((${array[index]}))
+		maxValue=$((${arrayOfNumber[index]}))
 	fi
-	if(($minValue>$((${array[index]}))))
+	if(($minValue>$((${arrayOfNumber[index]}))))
 	then
-		minValue=${array[index]}
+		minValue=${arrayOfNumber[index]}
 	fi
 	((index++))
 done
@@ -46,20 +46,20 @@ echo "Maximum Value : " $maxValue
 
 #VARIABLE
 index=1
-secondMinValue=${array[0]}
-secondMaxValue=${array[0]}
+secondMinValue=${arrayOfNumber[0]}
+secondMaxValue=${arrayOfNumber[0]}
 
 
 #LOGIC TO FIND SECOND MIN AND MAX VALUE
-while (($index<$((${#array[@]}))))
+while (($index<$((${#arrayOfNumber[@]}))))
 do
-	if(($secondMaxValue<${array[index]} && $maxValue!=$((${array[index]}))))
+	if(($secondMaxValue<${arrayOfNumber[index]} && $maxValue!=$((${arrayOfNumber[index]}))))
 	then
-		secondMaxValue=${array[index]}
+		secondMaxValue=${arrayOfNumber[index]}
 	fi
-	if(($secondMinValue>${array[index]} && $minValue!=$((${array[index]}))))
+	if(($secondMinValue>${arrayOfNumber[index]} && $minValue!=$((${arrayOfNumber[index]}))))
 	then
-		secondMinValue=${array[index]}
+		secondMinValue=${arrayOfNumber[index]}
 	fi
 	((index++))
 done
