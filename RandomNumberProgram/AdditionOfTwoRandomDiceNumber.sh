@@ -1,6 +1,6 @@
 #!/bin/bash -x
-randVal=$((RANDOM%6))
-randVal2=$((RANDOM%6))
-randVal=$(( $randVal+ 1 ))
-randVal2=$(( $randVal2 + 1 ))
-echo $randVal "+" $randVal2 ":" $(($randVal+$randVal2))
+randomValue1=$((RANDOM%6))
+randomValue2=$((RANDOM%6))
+randomValue1=$(( $randomValue1+ 1 ))
+randomValue2=$(( $randomValue2 + 1 ))
+echo $randomValue1 "+" $randomValue2 ":" $(($randomValue1+$randomValue2))
