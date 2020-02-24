@@ -22,6 +22,9 @@ elif [ $randomNum5 -lt $minValue ]
 then
 	minValue=$randomNum5
 fi
+
+
+#DISPLAY MINIMUM VALUE
 echo $minValue
 
 
@@ -39,6 +42,9 @@ elif [ $randomNum5 -gt $maxValue ]
 then
 	maxValue=$randomNum5
 fi
+
+
+#DISPLAY MAXIMUM VALUE
 echo $maxValue
 
 
