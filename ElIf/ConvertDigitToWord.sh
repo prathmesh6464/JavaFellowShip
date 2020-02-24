@@ -2,35 +2,35 @@
 read -p "Enter Any Value : " digit
 if [[ digit -eq 0 ]]
 then
-	echo "Zero"
+	echo "Zero";
 elif [[ digit -eq 1 ]]
 then
-	echo "One"
+	echo "One";
 elif [[ digit -eq 2 ]]
 then 
-	echo "Two"
+	echo "Two";
 
 elif [[ digit -eq 3 ]]
 then
-	echo "Three"
+	echo "Three";
 elif [[ digit -eq 4 ]]
 then 
-	echo "Four"
+	echo "Four";
 elif [[ digit -eq 5 ]]
 then 
-	echo "Five"
+	echo "Five";
 elif [[ digit -eq 6 ]]
 then 
-	echo "Six"
+	echo "Six";
 elif [[ digit -eq 7 ]]
 then 
-	echo "Seven"
+	echo "Seven";
 elif [[ digit -eq 8 ]]
 then
-	echo "Eight"
+	echo "Eight";
 elif [[ digit -eq 9 ]]
 then 
-	echo "Nine"
+	echo "Nine";
 else
-	echo "Please Enter One Digit Value"
+	echo "Please Enter One Digit Value";
 fi
