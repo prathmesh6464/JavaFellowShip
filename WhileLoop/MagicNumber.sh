@@ -6,6 +6,7 @@ read -p "Enter The Number : " number
 num=1
 changeValue=101
 
+
 #SEARCHING NUMBER
 while (($num<=$changeValue))
 do 	val=$((num+changeValue))
