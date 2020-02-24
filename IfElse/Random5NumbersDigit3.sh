@@ -6,6 +6,7 @@ randomNum3=$((RANDOM%900+100))
 randomNum4=$((RANDOM%900+100))
 randomNum5=$((RANDOM%900+100))
 
+
 #FINDING MINIMUM VALUE
 minValue=$randomNum1
 maxValue=$randomNum1
