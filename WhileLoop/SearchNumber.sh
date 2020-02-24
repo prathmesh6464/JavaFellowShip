@@ -7,7 +7,7 @@ number1=1
 changeValue=101
 
 
-#SEARCHING VARIABLE
+#SEARCHING VARIABLE  
 while (($number1<=$changeValue))
 do
 	val=$((number1+changeValue))
