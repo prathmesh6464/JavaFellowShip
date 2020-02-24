@@ -24,7 +24,7 @@ minValue=${arrayOfNumber[0]}
 maxValue=${arrayOfNumber[0]}
 
 
-#LOGIC TO FIND MIN AND MAX VALUE
+#LOGIC TO FIND MIN AND MAX VALUE IN ARRAY OF NUMBER
 while (($index<$((${#arrayOfNumber[@]}))))
 do
 	if(($maxValue<$((${arrayOfNumber[index]}))))
