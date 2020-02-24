@@ -1,21 +1,20 @@
 #!/bin/bash -x
 read -p "Enter Number To Display The Week Day : " Number
 case $Number in 
-
 	0)
-		echo Sunday;;
+		echo "Sunday";;
 	1)
-		echo Monday;;
+		echo "Monday";;
 	2)
-		echo Tuesday;;
+		echo "Tuesday";;
 	3)
-		echo Wednesday;;
+		echo "Wednesday";;
 	4)
-		echo Thursday;;
+		echo "Thursday";;
 	5)
-		echo Friday;;
+		echo "Friday";;
 	6)
-		echo Saturday;;
+		echo "Saturday";;
 	*)
-		echo "please Enter Number From 0 to 6 only"
+		echo "please Enter Number From 0 to 6 only";;
 esac
