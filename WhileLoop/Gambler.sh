@@ -3,16 +3,17 @@ read -p "Enter The Number : " number
 
 
 #VARIABLE
-num=1
+number1=1
 changeValue=101
 
 
-while (($num<=$changeValue))
+#SEARCHING VARIABLE
+while (($number1<=$changeValue))
 do
-	val=$((num+changeValue))
+	val=$((number1+changeValue))
 	if (($((Val%2))==0))
 	then
-		mid=$(($((num+changeValue))/2))
+		mid=$(($((number1+changeValue))/2))
 		if (($mid==$number))
 		then
 			echo $mid Found
@@ -20,22 +21,22 @@ do
 		fi
 		if (($mid<$number))
 		then
-			num=$mid
+			number1=$mid
 		else
 			changeValue=$mid
 		fi
 	else
-		mid=$(($((num+changeValue+1))/2))
+		mid=$(($((number1+changeValue+1))/2))
 		if (($mid==$number))
 		then
 			echo $mid Found
 			break
 		fi
-                if (($mid<$number))
-                then
-                        num=$mid
-                else
-                        changeValue=$mid
- 	        fi
+      if (($mid<$number))
+      then
+     		 number1=$mid
+      else
+          changeValue=$mid
+      fi
 	fi
 done
