@@ -7,6 +7,7 @@ powerLimit=$1
 power=0
 
 
+#LOGIC OF FINDING POWER
 while ((power<=powerLimit))
 do
 	val=`echo "2^$power" | bc`
