@@ -1,7 +1,7 @@
 #!/bin/bash -x
 #VARIABLE
 temp=0
-declare -a array
+declare -a arrayOfPrimeFactor
 
 
 #LOGIC OF PRIME FACTOR
@@ -21,7 +21,7 @@ do
 		 if (( $((number%iter))==0 && iter!=1 ))
        		 then
 			((temp++))
-			array[temp]=$iter
+			arrayOfPrimeFactor[temp]=$iter
 			number=$((number/iter))
 			iter=$((iter-1))
 		fi
@@ -30,4 +30,4 @@ done
 
 
 #DISPLAYING ARRAY
-echo "Array Of Prime Factor : " ${array[@]}
+echo "Array Of Prime Factor : " ${arrayOfPrimeFactor[@]}
