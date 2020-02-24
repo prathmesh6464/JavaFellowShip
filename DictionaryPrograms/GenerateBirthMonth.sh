@@ -1,10 +1,9 @@
 #!/bin/bash -x
 #CONSTANT VARIABLE
 INDIVIDUALS_NUMBER=50
-
+NUMBER_OF_MONTH=12
 
 #VARIABLE
-NUMBER_OF_MONTH=12
 declare -A birthDateArray
 
 
