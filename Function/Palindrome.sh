@@ -18,5 +18,7 @@ palindrome()
 		echo The $number is Not Palindrome
 	fi
 }
+
+
 #PALINDROME FUNCTION CALLED
 palindrome $number
