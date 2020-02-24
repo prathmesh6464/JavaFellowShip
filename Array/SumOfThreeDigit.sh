@@ -1,16 +1,16 @@
 #!/bin/bash -x
 #VARIBALE
-array=(-1 0 1 2 -3)
+arrayOfNumber=(-1 0 1 2 -3)
 
 
 #LOGIC TO COMPUTE SUM OF 3 NUMBERS EQUALS TO ZERO
-for ((iter=0;iter<$((${#array[@]}-2));iter++))
+for ((iter=0;iter<$((${#arrayOfNumber[@]}-2));iter++))
 do
 	second=$((iter+1))
 	third=$((iter+2))
-	if (( $((${array[iter]}+${array[second]}+${array[third]}))==0 ))
+	if (( $((${arrayOfNumber[iter]}+${arrayOfNumber[second]}+${arrayOfNumber[third]}))==0 ))
 	then
-		echo ${array[iter]} ${array[second]} ${array[third]} "Sum Is : " 0
+		echo ${arrayOfNumber[iter]} ${arrayOfNumber[second]} ${arrayOfNumber[third]} "Sum Is : " 0
 	fi
 done
 
