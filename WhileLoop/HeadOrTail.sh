@@ -3,7 +3,7 @@
 tail=0
 head=0
 
-
+#LOGIC OF GENERATING HEAD OR TAIL
 while (($tail!=11 && $head!=11))
 do
 	number=$((RANDOM%2))
