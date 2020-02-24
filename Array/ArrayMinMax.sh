@@ -8,14 +8,14 @@ declare -a arrayOfNumber
 index=1
 
 
-#TAKING INPUT IN ARRAY
+#TAKING INPUT IN ARRAY OF NUMBER
 for ((iter=0;iter<SIZE_OF_ARRAY;iter++))
 do
 	arrayOfNumber[iter]=$((RANDOM%900+100))
 done
 
 
-#DISPLAY ARRAY
+#DISPLAY ARRAY OF NUMBER
 echo ${arrayOfNumber[@]}
 
 
