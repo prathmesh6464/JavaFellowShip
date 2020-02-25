@@ -17,7 +17,7 @@ do
 	result=$((RANDOM%2))
 	if (($result==1))
 	then
-		accountBalance=$((accountBalance+1))
+		accountBalance=$(($accountBalance+$STAKE))
 		((won++))
 		((goal++))
 		if (($goal==$TARGET))
@@ -26,7 +26,7 @@ do
 			break
 		fi
 	else
-		accountBalance=$((accountBalance-1))
+		accountBalance=$(($accountBalance-$STAKE))
 		((lost++))
 		((goal--))
 		if (($accountBalance==0))
