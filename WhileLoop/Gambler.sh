@@ -1,42 +1,43 @@
 #!/bin/bash -x
-read -p "Enter The Number : " number
-
-
 #VARIABLE
-number1=1
-changeValue=101
+accountBalance=100
+won=0
+lost=0
+goal=0
 
 
-#SEARCHING VARIABLE
-while (($number1<=$changeValue))
-do
-	val=$((number1+changeValue))
-	if (($((Val%2))==0))
+#CONSTANT VARIABLE
+STAKE=1
+TARGET=200
+
+
+#LOOP FOR GENERATING RANDOM NUMBER 
+while ((1))
+do 
+	result=$((RANDOM%2))
+	if (($result==1))
 	then
-		mid=$(($((number1+changeValue))/2))
-		if (($mid==$number))
+		accountBalance=$((accountBalance+1))
+		((won++))
+		((goal++))
+		if (($goal==$TARGET))
 		then
-			echo $mid Found
+			echo You Achieved Your Goal Of : $goal
 			break
-		fi
-		if (($mid<$number))
-		then
-			number1=$mid
-		else
-			changeValue=$mid
 		fi
 	else
-		mid=$(($((number1+changeValue+1))/2))
-		if (($mid==$number))
-		then
-			echo $mid Found
+		accountBalance=$((accountBalance-1))
+		((lost++))
+		((goal--))
+		if (($accountBalance==0))
+                then
+                        echo You Are Broke Your Account Balance is : $accountBalance
 			break
-		fi
-      if (($mid<$number))
-      then
-     		 number1=$mid
-      else
-          changeValue=$mid
-      fi
+                fi
 	fi
 done
+
+
+#DISPLAY RESULT
+echo You Won $won Times
+echo You Lost $lost Times
